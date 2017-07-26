@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://127.0.0.1:8092/resource/conf/PropertiesReader.dtd">
+<properties>
+	<!-- 这个配置文件记录了系统的相关配置信息，它们直接关系到一些功能的实现，请勿随意更改 -->
+	<property key="customerImageUploadProfile">
+		<map>
+			<!-- 文件服务器地址 -->
+			<entry key="ftpHostAddress">127.0.0.1</entry>
+			<!-- 文件服务器登录用户名 -->
+			<entry key="username">admin</entry>
+			<!-- 文件服务器登录密码 -->
+			<entry key="password">admin123</entry>
+			<!-- 上传的商品图片位于文件服务器上的哪个目录，以"/"开始，表示从根目录开始 -->
+			<entry key="uploadPath">/customer</entry>
+		</map>
+	</property>
+	<property key="imgRootUrl">
+		<string>http://127.0.0.1:8092/resource</string>
+	</property>
+</properties>

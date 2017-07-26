@@ -1,0 +1,15 @@
+document.write('<table width="100%" border="0" cellspacing="0" cellpadding="0">');
+document.write('<tr id="headPush0" style="display:none">');
+document.write('	<td width="80" height="60"><a href="http://search1.paipai.com/_CA_B1_C9_D0_20_CD_E2_CC_D7//0_2C22001/p-1--drecommend-22001---0-7-0-0-0-0-0-----------------.html&ac=1?ADTAG=388.19.15" target="_blank"><img src="http://pics.paipai.com/update/20071206/index_headImg05.gif" /></a></td>');
+document.write('	<td style="padding-left:10px"><a href="http://search1.paipai.com/_CA_B1_C9_D0_20_CD_E2_CC_D7//0_2C22001/p-1--drecommend-22001---0-7-0-0-0-0-0-----------------.html&ac=1?ADTAG=388.19.15" target="_blank" style="color:#fff">型人外套<br /><span class=\'s\' style=\'color:#c0c0c0\'>358.00</span> 158.00</a></td>');
+document.write('</tr>');
+document.write('<tr id="headPush1" style="display:none">');
+document.write('	<td width="80" height="60"><a href="http://search1.paipai.com/_C7_E9_C2_C2//0_2C6001_2D0_2C6017_2D0_2C27040_2D1_2C3/p-1-40-drecommend-27040--3-4-3-0-10000-0-0-0-2-2-128-128-3------------.html&ac=1?ADTAG=388.19.16" target="_blank"><img src="http://pics.paipai.com/update/20071221/index_headImg000.gif" /></a></td>');
+document.write('	<td style="padding-left:10px"><a href="http://search1.paipai.com/_C7_E9_C2_C2//0_2C6001_2D0_2C6017_2D0_2C27040_2D1_2C3/p-1-40-drecommend-27040--3-4-3-0-10000-0-0-0-2-2-128-128-3------------.html&ac=1?ADTAG=388.19.16" target="_blank" style="color:#fff">情侣运动穿出精彩<br /><span class=\'s\' style=\'color:#c0c0c0\'>255.00</span> 100.00</td>');
+document.write('</tr>');
+document.write('<tr id="headPush2" style="display:none">');
+document.write('	<td width="80" height="60"><a href="http://search1.paipai.com/_C1_B4_CC_F5_20_2D_B8_BD//0_2C21001_2D0_2C21002/p-1-40-drecommend-21002--3-4-7------2-2-512-128------------.html&ac=1?ADTAG=388.19.17" target="_blank"><img src="http://pics.paipai.com/update/20071119/lady_001.gif" /></a></td>');
+document.write('	<td style="padding-left:10px"><a href="http://search1.paipai.com/_C1_B4_CC_F5_20_2D_B8_BD//0_2C21001_2D0_2C21002/p-1-40-drecommend-21002--3-4-7------2-2-512-128------------.html&ac=1?ADTAG=388.19.17" target="_blank" style="color:#fff">精致优雅链条包<br /><span class=\'s\' style=\'color:#c0c0c0\'>399.00</span> 118.00</td>');
+document.write('</tr>');
+document.write('</table>');
+document.write('<script type="text/javascript">document.getElementById("headPush"+rand(3)).style.display="";</script>');

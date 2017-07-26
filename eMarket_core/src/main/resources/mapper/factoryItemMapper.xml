@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.FactoryDAO">
+	<resultMap type="com.eMarket.model.po.FactoryItem" id="factoryItem">
+		<result property="id" column="id"/>
+		<result property="amount" column="amount"/>
+		<association property="goods" javaType="com.eMarket.model.po.Goods">
+			<result property="id" column="goods_id"/>
+			<result property="name" column="goods_name"/>
+			<result property="image" column="goods_image"/>
+			<result property="price" column="goods_price"/>
+			<result property="status" column="goods_status"/>
+			<result property="createTime" column="goods_createTime"/>
+			<result property="content" column="goods_content"/>
+			<association property="brand" javaType="com.eMarket.model.po.Brand">
+				<result property="id" column="goods_brand_id"/>
+				<result property="name" column="goods_brand_name"/>
+				<result property="country" column="goods_brand_country"/>
+				<result property="createTime" column="goods_brand_createTime"/>
+				<result property="level" column="goods_brand_level"/>
+				<result property="comment" column="goods_brand_comment"/>
+			</association>
+			<association property="type" javaType="com.eMarket.model.po.Type">
+				<result property="id" column="goods_type_id"/>
+				<result property="name" column="goods_type_name"/>
+				<result property="createTime" column="goods_type_createTime"/>
+				<result property="comment" column="goods_type_comment"/>
+			</association>
+		</association>
+		<association property="market" javaType="com.eMarket.model.po.Market">
+			<result property="id" column="market_id"/>
+			<result property="name" column="market_name"/>
+			<result property="status" column="market_status"/>
+		</association>
+	</resultMap>
+	
+	<insert id="saveFactory" parameterType="com.eMarket.model.po.FactoryItem">
+		insert into tb_factory(factory_id,factory_amount,factory_goods,factory_market)
+		values(#{id},#{amount},#{goods.id},#{market.id})
+	</insert>
+	<delete id="removeFactory">
+		delete from tb_factory where factory_id=#{id}
+	</delete>
+	<update id="updateFactory" parameterType="com.eMarket.model.po.FactoryItem">
+		update tb_factory
+			set
+				factory_amount=#{amount},
+				factory_goods=#{goods.id},
+				factory_market=#{market.id}
+		where factory_id=#{id}
+	</update>
+	<select id="getFactoryItemById" resultMap="factoryItem">
+		select
+			tb_factory.factory_id as id,
+			tb_factory.factory_amount as amount,
+			tb_goods.goods_id as goods_id,
+			tb_goods.goods_name as goods_name,
+			tb_goods.goods_image as goods_image,
+			tb_goods.goods_price as goods_price,
+			tb_goods.goods_status as goods_status,
+			tb_goods.goods_create_time as goods_createTime,
+			tb_goods.goods_content as goods_content,
+			tb_brand.brand_id as goods_brand_id,
+			tb_brand.brand_name as goods_brand_name,
+			tb_brand.brand_country as goods_brand_country,
+			tb_brand.brand_create_time as goods_brand_createTime,
+			tb_brand.brand_level as goods_brand_level,
+			tb_brand.brand_comment as goods_brand_comment,
+			tb_type.type_id as goods_type_id,
+			tb_type.type_name as goods_type_name,
+			tb_type.type_create_time as goods_type_createTime,
+			tb_type.type_comment as goods_type_comment,
+			tb_market.market_id as market_id,
+			tb_market.market_name as market_name,
+			tb_market.market_status as market_status
+		from tb_factory
+			left join tb_goods on tb_factory.factory_goods=tb_goods.goods_id
+			left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+			left join tb_market on tb_factory.factory_market=tb_market.market_id
+		where tb_factory.factory_id=#{id}
+	</select>
+	<select id="fetchFactoryItem" resultMap="factoryItem">
+		select
+			tb_factory.factory_id as id,
+			tb_factory.factory_amount as amount,
+			tb_goods.goods_id as goods_id,
+			tb_goods.goods_name as goods_name,
+			tb_goods.goods_image as goods_image,
+			tb_goods.goods_price as goods_price,
+			tb_goods.goods_status as goods_status,
+			tb_goods.goods_create_time as goods_createTime,
+			tb_goods.goods_content as goods_content,
+			tb_brand.brand_id as goods_brand_id,
+			tb_brand.brand_name as goods_brand_name,
+			tb_brand.brand_country as goods_brand_country,
+			tb_brand.brand_create_time as goods_brand_createTime,
+			tb_brand.brand_level as goods_brand_level,
+			tb_brand.brand_comment as goods_brand_comment,
+			tb_type.type_id as goods_type_id,
+			tb_type.type_name as goods_type_name,
+			tb_type.type_create_time as goods_type_createTime,
+			tb_type.type_comment as goods_type_comment,
+			tb_market.market_id as market_id,
+			tb_market.market_name as market_name,
+			tb_market.market_status as market_status
+		from tb_factory
+			left join tb_goods on tb_factory.factory_goods=tb_goods.goods_id
+			left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+			left join tb_market on tb_factory.factory_market=tb_market.market_id
+		where 1=1
+		<if test="id!=null">
+			and tb_factory.factory_id=#{id}
+		</if>
+		<if test="lowestAmount!=null&amp;&amp;highestAmount!=null">
+			and tb_factory.factory_amount between #{lowestAmount} and #{highestAmount}
+		</if>
+		<if test="canDealedQuantity!=null">
+			and tb_factory.factory_amount&gt;#{canDealedQuantity}
+		</if>
+		<if test="goodsId!=null">
+			and tb_goods.goods_id=#{goodsId}
+		</if>
+		<if test="goodsName!=null">
+			and tb_goods.goods_name like concat('%',#{goodsName},'%')
+		</if>
+		<if test="lowestGoodsPrice!=null&amp;&amp;highestGoodsPrice!=null">
+			and tb_goods.goods_price between #{lowestGoodsPrice} and #{highestGoodsPrice}
+		</if>
+		<if test="goodsStatus!=null">
+			and tb_goods.goods_status=#{goodsStatus}
+		</if>
+		<if test="startGoodsCreateTime!=null&amp;&amp;endGoodsCreateTime!=null">
+			and tb_goods.goods_create_time between #{startGoodsCreateTime} and #{endGoodsCreateTime}
+		</if>
+		<if test="goodsContent!=null">
+			and tb_goods.goods_content like concat('%',#{goodsContent},'%')
+		</if>
+		<if test="goodsBrandId!=null">
+			and tb_brand.brand_id=#{goodsBrandId}
+		</if>
+		<if test="goodsBrandName!=null">
+			and tb_brand.brand_name like concat('%',#{goodsBrandName},'%')
+		</if>
+		<if test="goodsBrandCountry!=null">
+			and tb_brand.brand_country like concat('%',#{goodsBrandCountry},'%')
+		</if>
+		<if test="goodsBrandStartCreateTime!=null&amp;&amp;goodsBrandEndCreateTime!=null">
+			and tb_brand.brand_create_time between #{goodsBrandStartCreateTime} and #{goodsBrandEndCreateTime}
+		</if>
+		<if test="goodsBrandLowestLevel!=null&amp;&amp;goodsBrandHighestLevel!=null">
+			and tb_brand.brand_level between #{goodsBrandLowestLevel} and #{goodsBrandHighestLevel}
+		</if>
+		<if test="goodsBrandComment!=null">
+			and tb_brand.brand_comment like concat('%',#{goodsBrandComment},'%')
+		</if>
+		<if test="goodsTypeId!=null">
+			and tb_type.type_id=#{goodsTypeId}
+		</if>
+		<if test="goodsTypeName!=null">
+			and tb_type.type_name like concat('%',#{goodsTypeName},'%')
+		</if>
+		<if test="goodsTypeStartCreateTime!=null&amp;&amp;goodsTypeEndCreateTime!=null">
+			and tb_type.type_create_time between #{goodsTypeStartCreateTime} and #{goodsTypeEndCreateTime}
+		</if>
+		<if test="goodsTypeComment!=null">
+			and tb_type.type_comment like concat('%',#{goodsTypeComment},'%')
+		</if>
+		<if test="marketId!=null">
+			and tb_market.market_id=#{marketId}
+		</if>
+		<if test="marketName!=null">
+			and tb_market.market_name like concat('%',#{marketName},'%')
+		</if>
+		<if test="marketStatus!=null">
+			and tb_market.market_status=#{marketStatus}
+		</if>
+	</select>
+	<update id="addFactory">
+		update tb_factory
+			set
+				factory_amount=factory_amount+#{amount}
+		where factory_id=#{id}
+	</update>
+	<update id="minusFactory">
+		update tb_factory
+			set
+				factory_amount=factory_amount-#{amount}
+		where factory_id=#{id} and factory_amount&gt;=#{amount}
+	</update>
+</mapper>

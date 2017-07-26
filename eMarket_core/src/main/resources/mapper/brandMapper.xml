@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.BrandDAO">
+	<insert id="saveBrand" parameterType="com.eMarket.model.po.Brand">
+		insert into tb_brand(brand_id,brand_name,brand_country,brand_create_time,brand_level,brand_comment)
+		values(#{id},#{name},#{country},#{createTime},#{level},#{comment})
+	</insert>
+	<insert id="removeBrand">
+		delete from tb_brand where brand_id=#{id}
+	</insert>
+	<update id="updateBrand" parameterType="com.eMarket.model.po.Brand">
+		update tb_brand
+			set
+				brand_name=#{name},
+				brand_country=#{country},
+				brand_create_time=#{createTime},
+				brand_level=#{level},
+				brand_comment=#{comment}
+		where brand_id=#{id}
+	</update>
+	<select id="getBrandById" resultType="com.eMarket.model.po.Brand">
+		select
+			brand_id as id,
+			brand_name as name,
+			brand_country as country,
+			brand_create_time as createTime,
+			brand_level as level,
+			brand_comment as comment
+		from tb_brand
+		where brand_id=#{id}
+	</select>
+	<select id="fetchBrands" resultType="com.eMarket.model.po.Brand">
+		select
+			brand_id as id,
+			brand_name as name,
+			brand_country as country,
+			brand_create_time as createTime,
+			brand_level as level,
+			brand_comment as comment
+		from tb_brand
+		where 1=1
+		<if test="id!=null">
+			and brand_id=#{id}
+		</if>
+		<if test="name!=null">
+			and brand_name like concat('%',#{name},'%')
+		</if>
+		<if test="lowestLevel!=null&amp;&amp;highestLevel!=null">
+			and brand_level between #{lowestLevel} and #{highestLevel}
+		</if>
+		<if test="startCreateTime!=null&amp;&amp;lastCreateTime!=null">
+			and brand_create_time between #{startCreateTime} and #{lastCreateTime}
+		</if>
+		<if test="country!=null">
+			and brand_country like concat('%',#{country},'%')
+		</if>
+	</select>
+</mapper>

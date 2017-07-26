@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.TypeDAO">
+	<insert id="saveType" parameterType="com.eMarket.model.po.Type">
+		insert into tb_type(type_id,type_name,type_create_time,type_comment)
+		values(#{id},#{name},#{createTime},#{comment})
+	</insert>
+	<delete id="removeType">
+		delete from tb_type where type_id=#{id}
+	</delete>
+	<update id="updateType" parameterType="com.eMarket.model.po.Type">
+		update tb_type
+			set
+				type_name=#{name},
+				type_create_time=#{createTime},
+				type_comment=#{comment}
+		where type_id=#{id}
+	</update>
+	<select id="getTypeById" resultType="com.eMarket.model.po.Type">
+		select
+			type_id as id,
+			type_name as name,
+			type_create_time as createTime,
+			type_comment as comment
+		from tb_type
+		where type_id=#{id}
+	</select>
+	<select id="fetchTypes" resultType="com.eMarket.model.po.Type">
+		select
+			type_id as id,
+			type_name as name,
+			type_create_time as createTime,
+			type_comment as comment
+		from tb_type
+		where 1=1
+		<if test="id!=null">
+			and type_id=#{id}
+		</if>
+		<if test="name!=null">
+			and type_name like concat('%',#{name},'%')
+		</if>
+		<if test="startCreateTime!=null&amp;&amp;stopCreateTime!=null">
+			and type_create_time between #{startCreateTime} and #{stopCreateTime}
+		</if>
+		<if test="comment!=null">
+			and type_comment like concat('%',#{comment},'%')
+		</if>
+	</select>
+</mapper>

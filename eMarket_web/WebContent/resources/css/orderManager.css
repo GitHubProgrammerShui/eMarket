@@ -1,0 +1,42 @@
+#main{
+	height: 800px;
+}
+#top{
+	width: 100%;
+	height: auto;
+	border-color: #F4F8F9;
+	overflow: hidden;
+}
+#top .left{
+	width: 195px;
+	height: 35px;
+	margin: 0px;
+	background-color: #F4F8F9;
+	display: inline;
+	float: left;
+}
+#top .right{
+	width: 1000px;
+	height: 35px;
+	margin: 0px;
+	display: inline;
+	float: left;
+}
+#menuArea .menu{
+	width: 600px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+#contentArea{
+	width: 100%;
+	max-height: 2000px;
+	min-height: 500px;
+	margin: 0px;
+	background-color: #F4F8F9;
+}
+#contentArea .content{
+	 margin:auto;
+	 width: 1002px;
+	 height: auto;
+}

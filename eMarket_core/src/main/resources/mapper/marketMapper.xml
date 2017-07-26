@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.MarketDAO">
+	<resultMap type="com.eMarket.model.po.MarketDetail" id="marketDetail">
+		<result property="address" column="address"/>
+		<result property="level" column="level"/>
+		<result property="type" column="type"/>
+		<result property="praise" column="praise"/>
+		<association property="market" javaType="com.eMarket.model.po.Market">
+			<result property="id" column="market_id"/>
+			<result property="name" column="market_name"/>
+			<result property="status" column="market_staus"/>
+		</association>
+	</resultMap>
+	<insert id="saveMarketDetail" parameterType="com.eMarket.model.po.MarketDetail">
+		insert into tb_market(market_id,market_name,market_status,market_address,market_level,market_type,market_praise)
+		values(#{market.id},#{market.name},#{market.status},#{address},#{level},#{type},#{praise})
+	</insert>
+	<delete id="removeMarketDetail">
+		delete from tb_market where market_id=#{id}
+	</delete>
+	<update id="updateMarketDetail" parameterType="com.eMarket.model.po.MarketDetail">
+		update tb_market
+			set
+				market_name=#{market.name},
+				market_status=#{market.status},
+				market_address=#{address},
+				market_level=#{level},
+				market_type=#{type},
+				market_praise=#{praise}
+		where market_id=#{market.id}
+	</update>
+	<select id="getMarketById" resultType="com.eMarket.model.po.Market">
+		select
+			market_id as id,
+			market_name as name,
+			market_status as status
+		from tb_market
+		where market_id=#{id}
+	</select>
+	<select id="getMarketDetailById" resultMap="marketDetail">
+		select
+			market_id as market_id,
+			market_name as market_name,
+			market_status as market_status,
+			market_address as address,
+			market_level as level,
+			market_type as type,
+			market_praise as praise
+		from tb_market
+		where market_id=#{id}
+	</select>
+	<select id="fetchMarket" resultType="com.eMarket.model.po.Market">
+		select
+			market_id as id,
+			market_name as name,
+			market_status as status
+		from tb_market
+		where 1=1
+		<if test="id!=null">
+			and market_id=#{id}
+		</if>
+		<if test="name!=null">
+			and market_name like concat('%',#{name},'%')
+		</if>
+		<if test="status!=null">
+			and market_status=#{status}
+		</if>
+		<if test="belong!=null">
+			and market_belong=#{belong}
+		</if>
+	</select>
+</mapper>

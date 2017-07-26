@@ -1,0 +1,116 @@
+a:link {
+	text-decoration: none;
+	COLOR: #105cb6;
+	font-size: 13px;
+}
+.mTab {
+	border: 1px solid #000000;
+	font-size: 12px;
+}
+text {
+	border: 1px solid #A3B2CC;
+	height: 18px;
+	color: #105CB6;
+	font-size: 13px;
+}
+
+.tabTitle {
+	font-weight: normal;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #5FA6E7;
+	border-right-color: #448CEE;
+	border-bottom-color: #448CEE;
+	border-left-color: #5FA6E7;
+	background-color: #5FA6E7;
+	color: #FFFFFF;
+
+}
+
+a:visited {
+	text-decoration: none;
+	COLOR: #105cb6;
+	font-size: 13px;
+}
+a:hover {
+	text-decoration: none;
+    COLOR: #CC6633;
+	font-size: 13px;
+}
+a:active {
+	text-decoration: none;
+}
+body{
+	COLOR: #105cb6;
+	font-size: 13px;
+	text-indent: 8px;
+}
+.ta_bor {
+	border: 1px solid #D6E4F0;
+}
+
+
+.but {
+	color: #105CB6;
+	background-color: #EAEFF5;
+	height: 25px;
+	width: 75px;
+	border: 1px solid #56709A;
+	font-size: 12px;
+	margin: 0px;
+}
+submit {
+	color: #105CB6;
+	background-color: #EAEFF5;
+	height: 25px;
+	width: 75px;
+	border: 1px solid #56709A;
+	font-size: 12px;
+	margin: 0px;
+}
+
+button {
+	color: #105CB6;
+	background-color: #EAEFF5;
+	height: 25px;
+	width: 75px;
+	border: 1px solid #56709A;
+	font-size: 12px;
+	margin: 0px;
+}
+
+reset {
+	color: #105CB6;
+	background-color: #EAEFF5;
+	height: 25px;
+	width: 75px;
+	border: 1px solid #56709A;
+	font-size: 12px;
+	margin: 0px;
+}
+
+.ta_td2 {	/*background-color:#FFFFFF;*/
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #91C1EE;
+	border-bottom-color: #91C1EE;
+	border-left-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.fonts {
+	font-size: 12px;
+	color: #105CB6;
+}

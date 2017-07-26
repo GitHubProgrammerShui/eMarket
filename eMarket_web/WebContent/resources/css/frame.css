@@ -1,0 +1,21 @@
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.frameBorder {	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D6E4F0;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #D6E4F0;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-left-style: solid;
+	border-top-color: #D6E4F0;
+	border-left-color: #D6E4F0;
+}

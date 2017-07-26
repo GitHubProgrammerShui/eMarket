@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.OrderDAO">
+	<resultMap type="com.eMarket.model.po.Order" id="order">
+		<result property="id" column="id"/>
+		<result property="createTime" column="createTime"/>
+		<result property="amount" column="amount"/>
+		<result property="quantity" column="quantity"/>
+		<result property="status" column="status"/>
+		<association property="goods" javaType="com.eMarket.model.po.Goods">
+			<result property="id" column="goods_id"/>
+			<result property="name" column="goods_name"/>
+			<result property="image" column="goods_image"/>
+			<result property="price" column="goods_price"/>
+			<result property="status" column="goods_status"/>
+			<result property="createTime" column="goods_createTime"/>
+			<result property="content" column="goods_content"/>
+			<association property="brand" javaType="com.eMarket.model.po.Brand">
+				<result property="id" column="goods_brand_id"/>
+				<result property="name" column="goods_brand_name"/>
+				<result property="country" column="goods_brand_country"/>
+				<result property="createTime" column="goods_brand_createTime"/>
+				<result property="level" column="goods_brand_level"/>
+				<result property="comment" column="goods_brand_comment"/>
+			</association>
+			<association property="type" javaType="com.eMarket.model.po.Type">
+				<result property="id" column="goods_type_id"/>
+				<result property="name" column="goods_type_name"/>
+				<result property="createTime" column="goods_type_createTime"/>
+				<result property="comment" column="goods_type_comment"/>
+			</association>
+		</association>
+		<association property="market" javaType="com.eMarket.model.po.Market">
+			<result property="id" column="market_id"/>
+			<result property="name" column="market_name"/>
+			<result property="status" column="market_status"/>
+		</association>
+		<association property="customer" javaType="com.eMarket.model.po.Customer">
+			<result property="username" column="customer_username"/>
+			<result property="name" column="customer_name"/>
+			<result property="userType" column="customer_userType"/>
+		</association>
+	</resultMap>
+	<insert id="saveOrder" parameterType="com.eMarket.model.po.Order">
+		insert into tb_order(order_id,order_create_time,order_amount,order_quantity,order_status,order_goods,order_market,order_customer)
+		values(#{id},#{createTime},#{amount},#{quantity},#{status},#{goods.id},#{market.id},#{customer.username})
+	</insert>
+	<delete id="removeOrder">
+		delete from tb_order where order_id=#{id}
+	</delete>
+	<update id="updateOrder" parameterType="com.eMarket.model.po.Order">
+		update tb_order
+			set
+				order_create_time=#{createTime},
+				order_amount=#{amount},
+				order_quantity=#{quantity},
+				order_status=#{status},
+				order_goods=#{goods.id},
+				order_market=#{market.id},
+				order_customer=#{customer.username}
+		where order_id=#{id}
+	</update>
+	<select id="getOrderById" resultMap="order">
+		select
+			tb_order.order_id as id,
+			tb_order.order_create_time as createTime,
+			tb_order.order_amount as amount,
+			tb_order.order_quantity as quantity,
+			tb_order.order_status as status,
+			tb_goods.goods_id as goods_id,
+			tb_goods.goods_name as goods_name,
+			tb_goods.goods_image as goods_image,
+			tb_goods.goods_price as goods_price,
+			tb_goods.goods_status as goods_status,
+			tb_goods.goods_create_time as goods_createTime,
+			tb_goods.goods_content as goods_content,
+			tb_brand.brand_id as goods_brand_id,
+			tb_brand.brand_name as goods_brand_name,
+			tb_brand.brand_country as goods_brand_country,
+			tb_brand.brand_create_time as goods_brand_createTime,
+			tb_brand.brand_level as goods_brand_level,
+			tb_brand.brand_comment as goods_brand_comment,
+			tb_type.type_id as goods_type_id,
+			tb_type.type_name as goods_type_name,
+			tb_type.type_create_time as goods_type_createTime,
+			tb_type.type_comment as goods_type_comment,
+			tb_market.market_id as market_id,
+			tb_market.market_name as market_name,
+			tb_market.market_status as market_status,
+			tb_customer.customer_username as customer_username,
+			tb_customer.customer_name as customer_name,
+			tb_customer.customer_user_type as customer_userType
+		from tb_order 
+			left join tb_goods on tb_order.order_goods=tb_goods.goods_id
+			left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+			left join tb_market on tb_order.order_market=tb_market.market_id
+			left join tb_customer on tb_order.order_customer=tb_customer.customer_username
+		where tb_order.order_id=#{id}
+	</select>
+	<select id="fetchOrder" resultMap="order">
+		select
+			tb_order.order_id as id,
+			tb_order.order_create_time as createTime,
+			tb_order.order_amount as amount,
+			tb_order.order_quantity as quantity,
+			tb_order.order_status as status,
+			tb_goods.goods_id as goods_id,
+			tb_goods.goods_name as goods_name,
+			tb_goods.goods_image as goods_image,
+			tb_goods.goods_price as goods_price,
+			tb_goods.goods_status as goods_status,
+			tb_goods.goods_create_time as goods_createTime,
+			tb_goods.goods_content as goods_content,
+			tb_brand.brand_id as goods_brand_id,
+			tb_brand.brand_name as goods_brand_name,
+			tb_brand.brand_country as goods_brand_country,
+			tb_brand.brand_create_time as goods_brand_createTime,
+			tb_brand.brand_level as goods_brand_level,
+			tb_brand.brand_comment as goods_brand_comment,
+			tb_type.type_id as goods_type_id,
+			tb_type.type_name as goods_type_name,
+			tb_type.type_create_time as goods_type_createTime,
+			tb_type.type_comment as goods_type_comment,
+			tb_market.market_id as market_id,
+			tb_market.market_name as market_name,
+			tb_market.market_status as market_status,
+			tb_customer.customer_username as customer_username,
+			tb_customer.customer_name as customer_name,
+			tb_customer.customer_user_type as customer_userType
+		from tb_order 
+			left join tb_goods on tb_order.order_goods=tb_goods.goods_id
+			left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+			left join tb_market on tb_order.order_market=tb_market.market_id
+			left join tb_customer on tb_order.order_customer=tb_customer.customer_username
+		where 1=1
+		<if test="id!=null">
+			and tb_order.order_id=#{id}
+		</if>
+		<if test="startCreateTime!=null&amp;&amp;endCreateTime!=null">
+			and tb_order.order_create_time between #{startCreateTime} and #{endCreateTime}
+		</if>
+		<if test="lowestAmount!=null&amp;&amp;highestAmount!=null">
+			and amount between #{lowestAmount} and #{highestAmount}
+		</if>
+		<if test="lowestQuantity!=null&amp;&amp;highestAmount!=null">
+			and tb_order.order_quantity between #{lowestQuantity} and #{highestAmount}
+		</if>
+		<if test="status!=null">
+			and tb_order.order_status=#{status}
+		</if>
+		<if test="goodsId!=null">
+			and tb_goods.goods_id=#{goodsId}
+		</if>
+		<if test="goodsName!=null">
+			and tb_goods.goods_name like concat('%',#{goodsName},'%')
+		</if>
+		<if test="lowestGoodsPrice!=null&amp;&amp;highestGoodsPrice!=null">
+			and tb_goods.goods_price between #{lowestGoodsPrice} and #{highestGoodsPrice}
+		</if>
+		<if test="goodsStatus!=null">
+			and tb_goods.goods_status=#{goodsStatus}
+		</if>
+		<if test="startGoodsCreateTime!=null&amp;&amp;endGoodsCreateTime!=null">
+			and tb_goods.goods_create_time between #{startGoodsCreateTime} and #{endGoodsCreateTime}
+		</if>
+		<if test="goodsContent!=null">
+			and tb_goods.goods_content like concat('%',#{goodsContent},'%')
+		</if>
+		<if test="goodsBrandId!=null">
+			and tb_brand.brand_id=#{goodsBrandId}
+		</if>
+		<if test="goodsBrandName!=null">
+			and tb_brand.brand_name like concat('%',#{goodsBrandName},'%')
+		</if>
+		<if test="goodsBrandCountry!=null">
+			and tb_brand.brand_country like concat('%',#{goodsBrandCountry},'%')
+		</if>
+		<if test="goodsBrandStartCreateTime!=null&amp;&amp;goodsBrandEndCreateTime!=null">
+			and tb_brand.brand_create_time between #{goodsBrandStartCreateTime} and #{goodsBrandEndCreateTime}
+		</if>
+		<if test="goodsBrandLowestLevel!=null&amp;&amp;goodsBrandHighestLevel!=null">
+			and tb_brand.brand_level between #{goodsBrandLowestLevel} and #{goodsBrandHighestLevel}
+		</if>
+		<if test="goodsBrandComment!=null">
+			and tb_brand.brand_comment like concat('%',#{goodsBrandComment},'%')
+		</if>
+		<if test="goodsTypeId!=null">
+			and tb_type.type_id=#{goodsTypeId}
+		</if>
+		<if test="goodsTypeName!=null">
+			and tb_type.type_name like concat('%',#{goodsTypeName},'%')
+		</if>
+		<if test="goodsTypeStartCreateTime!=null&amp;&amp;goodsTypeEndCreateTime!=null">
+			and tb_type.type_create_time between #{goodsTypeStartCreateTime} and #{goodsTypeEndCreateTime}
+		</if>
+		<if test="goodsTypeComment!=null">
+			and tb_type.type_comment like concat('%',#{goodsTypeComment},'%')
+		</if>
+		<if test="marketId!=null">
+			and tb_market.market_id=#{marketId}
+		</if>
+		<if test="marketName!=null">
+			and tb_market.market_name like concat('%',#{marketName},'%')
+		</if>
+		<if test="marketStatus!=null">
+			and tb_market.market_status=#{marketStatus}
+		</if>
+		<if test="customerUsername!=null">
+			and tb_customer.customer_username=#{customerUsername}
+		</if>
+		<if test="customerLikeUsername!=null">
+			and tb_customer.customer_username like concat('%',#{customerLikeUsername},'%')
+		</if>
+		<if test="customerName!=null">
+			and tb_customer.customer_name like concat('%',#{customerName},'%')
+		</if>
+		<if test="customerUserType!=null">
+			and tb_customer.customer_user_type=#{customerUserType}
+		</if>
+	</select>
+</mapper>

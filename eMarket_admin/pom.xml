@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.shui.emarket</groupId>
+		<artifactId>eMarket</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<artifactId>eMarket_admin</artifactId>
+	<packaging>war</packaging>
+	
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-all</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		
+		<!-- Project -->
+		<dependency>
+			<groupId>com.shui.emarket</groupId>
+			<artifactId>eMarket_core</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+		
+		<!-- Apache jar -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		
+	</dependencies>
+</project>

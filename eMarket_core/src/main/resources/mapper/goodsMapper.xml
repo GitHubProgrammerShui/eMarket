@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.GoodsDAO">
+	<resultMap type="com.eMarket.model.po.Goods" id="goods">
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="image" column="image"/>
+		<result property="price" column="price"/>
+		<result property="status" column="status"/>
+		<result property="createTime" column="create_time"/>
+		<result property="content" column="content"/>
+		<association property="brand" javaType="com.eMarket.model.po.Brand">
+			<result property="id" column="brand_id"/>
+			<result property="name" column="brand_name"/>
+			<result property="createTime" column="brand_create_time"/>
+			<result property="country" column="brand_country"/>
+			<result property="level" column="brand_level"/>
+			<result property="comment" column="brand_comment"/>
+		</association>
+		<association property="type" javaType="com.eMarket.model.po.Type">
+			<result property="id" column="type_id"/>
+			<result property="name" column="type_name"/>
+			<result property="createTime" column="type_create_time"/>
+			<result property="comment" column="type_comment"/>
+		</association>
+	</resultMap>
+	
+	<insert id="saveGoods" parameterType="com.eMarket.model.po.Goods">
+		insert into tb_goods(goods_id,goods_name,goods_image,goods_price,goods_status,goods_brand,goods_type,goods_create_time,goods_content)
+		values(#{id},#{name},#{image},#{price},#{status},#{brand.id},#{type.id},#{createTime},#{content})
+	</insert>
+	<delete id="removeGoods">
+		delete from tb_goods where goods_id=#{id}
+	</delete>
+	<update id="updateGoods" parameterType="com.eMarket.model.po.Goods">
+		update tb_goods
+			set
+				goods_name=#{name},
+				goods_image=#{image},
+				goods_price=#{price},
+				goods_status=#{status},
+				goods_brand=#{brand.id},
+				goods_type=#{type.id},
+				goods_create_time=#{createTime},
+				goods_content=#{content}
+		where goods_id=#{id}
+	</update>
+	<select id="getGoodsById" resultMap="goods">
+		select
+			tb_goods.goods_id as id,
+			tb_goods.goods_name as name,
+			tb_goods.goods_image as image,
+			tb_goods.goods_price as price,
+			tb_goods.goods_status as status,
+			tb_goods.goods_create_time as createTime,
+			tb_goods.goods_content as content,
+			tb_brand.brand_id as brand_id,
+			tb_brand.brand_name as brand_name,
+			tb_brand.brand_country as brand_country,
+			tb_brand.brand_create_time as brand_create_time,
+			tb_brand.brand_level as brand_level,
+			tb_brand.brand_comment as brand_comment,
+			tb_type.type_id as type_id,
+			tb_type.type_name as type_name,
+			tb_type.type_create_time as type_create_time,
+			tb_type.type_comment as type_comment
+		from tb_goods left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+		where tb_goods.goods_id=#{id}
+	</select>
+	<select id="fetchGoods" resultMap="goods">
+		select
+			tb_goods.goods_id as id,
+			tb_goods.goods_name as name,
+			tb_goods.goods_image as image,
+			tb_goods.goods_price as price,
+			tb_goods.goods_status as status,
+			tb_goods.goods_create_time as createTime,
+			tb_goods.goods_content as content,
+			tb_brand.brand_id as brand_id,
+			tb_brand.brand_name as brand_name,
+			tb_brand.brand_country as brand_country,
+			tb_brand.brand_create_time as brand_create_time,
+			tb_brand.brand_level as brand_level,
+			tb_brand.brand_comment as brand_comment,
+			tb_type.type_id as type_id,
+			tb_type.type_name as type_name,
+			tb_type.type_create_time as type_create_time,
+			tb_type.type_comment as type_comment
+		from tb_goods left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+		where 1=1
+		<if test="id!=null">
+			and tb_goods.goods_id=#{id}
+		</if>
+		<if test="name!=null">
+			and tb_goods.goods_name like concat('%',#{name},'%')
+		</if>
+		<if test="brand_id!=null">
+			and tb_goods.goods_brand=#{brand_id}
+		</if>
+		<if test="brand_name!=null">
+			and tb_brand.brand_name like concat('%',#{brand.name},'%')
+		</if>
+		<if test="type_id!=null">
+			and tb_goods.goods_type=#{type_id}
+		</if>
+		<if test="type_name!=null">
+			and tb_type.type_name like concat('%',#{type.id},'%')
+		</if>
+		<if test="lowestPrice!=null&amp;&amp;highestPrice!=null">
+			and tb_goods.goods_price between #{lowestPrice} and #{highestPrice}
+		</if>
+		<if test="status!=null">
+			and status=#{status}
+		</if>
+	</select>
+	<select id="countFetchedGoods" resultType="java.lang.Integer">
+		select
+			count(*)
+		from tb_goods left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+		where 1=1
+		<if test="id!=null">
+			and tb_goods.goods_id=#{id}
+		</if>
+		<if test="name!=null">
+			and tb_goods.goods_name like concat('%',#{name},'%')
+		</if>
+		<if test="brand_id!=null">
+			and tb_goods.goods_brand=#{brand_id}
+		</if>
+		<if test="brand_name!=null">
+			and tb_brand.brand_name like concat('%',#{brand_name},'%')
+		</if>
+		<if test="type_id!=null">
+			and tb_goods.goods_type=#{type_id}
+		</if>
+		<if test="type_name!=null">
+			and tb_type.type_name like concat('%',#{type_id},'%')
+		</if>
+		<if test="lowestPrice!=null&amp;&amp;highestPrice!=null">
+			and tb_goods.goods_price between #{lowestPrice} and #{highestPrice}
+		</if>
+		<if test="status!=null">
+			and status=#{status}
+		</if>
+	</select>
+	<select id="loadPage" resultMap="goods">
+		select
+			tb_goods.goods_id as id,
+			tb_goods.goods_name as name,
+			tb_goods.goods_image as image,
+			tb_goods.goods_price as price,
+			tb_goods.goods_status as status,
+			tb_goods.goods_create_time as createTime,
+			tb_goods.goods_content as content,
+			tb_brand.brand_id as brand_id,
+			tb_brand.brand_name as brand_name,
+			tb_brand.brand_country as brand_country,
+			tb_brand.brand_create_time as brand_create_time,
+			tb_brand.brand_level as brand_level,
+			tb_brand.brand_comment as brand_comment,
+			tb_type.type_id as type_id,
+			tb_type.type_name as type_name,
+			tb_type.type_create_time as type_create_time,
+			tb_type.type_comment as type_comment
+		from tb_goods left join tb_brand on tb_goods.goods_brand=tb_brand.brand_id
+			left join tb_type on tb_goods.goods_type=tb_type.type_id
+		where 1=1
+		<if test="condition.id!=null">
+			and tb_goods.goods_id=#{condition.id}
+		</if>
+		<if test="condition.name!=null">
+			and tb_goods.goods_name like concat('%',#{condition.name},'%')
+		</if>
+		<if test="condition.brand_id!=null">
+			and tb_goods.goods_brand=#{condition.brand_id}
+		</if>
+		<if test="condition.brand_name!=null">
+			and tb_brand.brand_name like concat('%',#{condition.brand_name},'%')
+		</if>
+		<if test="condition.type_id!=null">
+			and tb_goods.goods_type=#{condition.type_id}
+		</if>
+		<if test="condition.type_name!=null">
+			and tb_type.type_name like concat('%',#{condition.type_name},'%')
+		</if>
+		<if test="condition.lowestPrice!=null&amp;&amp;condition.highestPrice!=null">
+			and tb_goods.goods_price between #{condition.lowestPrice} and #{condition.highestPrice}
+		</if>
+		<if test="condition.status!=null">
+			and status=#{condition.status}
+		</if>
+		limit #{startIndex},#{pageSize}
+	</select>
+</mapper>

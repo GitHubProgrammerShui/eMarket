@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.emarket.dao.CustomerDAO">
+	<resultMap type="com.eMarket.model.po.CustomerDetail" id="customerDetail">
+		<result property="createTime" column="createTime"/>
+		<result property="image" column="image"/>
+		<result property="level" column="level"/>
+		<result property="score" column="score"/>
+		<result property="sex" column="sex"/>
+		<result property="address" column="address"/>
+		<result property="tel" column="tel"/>
+		<result property="email" column="email"/>
+		<result property="qq" column="qq"/>
+		<association property="customer" javaType="com.eMarket.model.po.Customer">
+			<result property="username" column="customer_username"/>
+			<result property="password" column="customer_password"/>
+			<result property="name" column="customer_name"/>
+			<result property="userType" column="customer_userType"/>
+		</association>
+	</resultMap>
+	
+	<insert id="saveCustomer" parameterType="com.eMarket.model.po.CustomerDetail">
+		insert into tb_customer(customer_username,customer_password,customer_name,customer_user_type,customer_create_time,customer_image,customer_level,customer_score,customer_sex,customer_address)
+		values(#{customer.username},#{customer.password},#{customer.name},#{customer.userType},#{createTime},#{image},#{level},#{score},#{sex},#{address})
+	</insert>
+	<delete id="removeCustomer">
+		delete from tb_customer where customer_username=#{username}
+	</delete>
+	<update id="updateCustomer" parameterType="com.eMarket.model.po.CustomerDetail">
+		update tb_customer
+			set
+				customer_password=#{customer.password},
+				customer_name=#{customer.name},
+				customer_user_type=#{customer.userType},
+				customer_create_time=#{createTime},
+				customer_image=#{image},
+				customer_level=#{level},
+				customer_score=#{score},
+				customer_sex=#{sex},
+				customer_address=#{address}
+		where customer_username=#{customer.username}
+	</update>
+	<select id="getCustomerByUsername" resultType="com.eMarket.model.po.Customer">
+		select
+			customer_username as username,
+			customer_password as password,
+			customer_name as name,
+			customer_user_type as userType
+		from tb_customer
+		where customer_username=#{username}
+	</select>
+	<select id="getCustomerDetailByUsername" resultMap="customerDetail">
+		select
+			customer_username as customer_username,
+			customer_password as customer_password,
+			customer_name as customer_name,
+			customer_user_type as customer_userType,
+			customer_create_time as createTime,
+			customer_image as image,
+			customer_level as level,
+			customer_score as score,
+			customer_sex as sex,
+			customer_address as address,
+			customer_tel as tel,
+			customer_email as email,
+			customer_qq as qq
+		from tb_customer
+		where customer_username=#{username}
+	</select>
+	<select id="fetchCustomer" resultType="com.eMarket.model.po.Customer">
+		select
+			customer_username as username,
+			customer_password as password,
+			customer_name as name,
+			customer_user_type as userType
+		from tb_customer
+		where 1=1
+		<if test="username!=null">
+			and customer_username like concat('%',#{username},'%')
+		</if>
+		<if test="name!=null">
+			and customer_name like concat('%',#{name},'%')
+		</if>
+		<if test="userType!=null">
+			and customer_user_type=#{userType}
+		</if>
+	</select>
+</mapper>

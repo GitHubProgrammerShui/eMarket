@@ -1,0 +1,176 @@
+/* 通用样式表v2.4 */
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+p,td,input,option,textarea,select{color:#333333;font:12px "Verdana"}
+form,ul,li,p,ol{margin:0;padding:0}
+body{background:#FFFFFF;text-align:center}
+img{border:0}
+ul{list-style-type:none}
+table{text-align:left}
+.full{margin:0 10px;text-align:left}
+.main,.m760,.m950{margin:0 auto;text-align:left;width:760px}
+.m950{width:950px}
+.clear{border-top:1px solid transparent !important;border-top:0;clear:both}
+.debug{border:1px dashed #FF00FF}
+.font14{font-size:14px}
+.number{font-family:Arial}
+.b{font-weight:bold}
+.s{text-decoration:line-through;font-family:"宋体"}
+.ime{ime-mode:disabled}
+.desc{line-height:150%;word-break:break-all;word-wrap:break-word}
+.break{line-height:140%;word-break:break-all;word-wrap:break-word}
+.lineCenter{text-align:center}
+.lineLeft{text-align:left}
+.lineRight{text-align:right}
+.relative{position:relative}
+.absolute{
+	position:absolute;
+	background-image: url(img/brand_right.gif);
+	top: 0px;
+}
+.abso{
+	position:absolute;
+	background-image: url(img/headFindBg.gif);
+	top: 298px;
+	width: 51px;
+}
+.overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.help{cursor:help}
+.over{cursor:pointer}
+a:link,a:visited{color:#1835D1;text-decoration:none}
+.fontRed,a.fontRed:link,a.fontRed:visited{color:#ff0000}
+.fontOrange,a.fontOrange:link,a.fontOrange:visited{color:#FF4E00}
+.fontGray,a.fontGray:link,a.fontGray:visited{color:#808080}
+.fontBlack,a.fontBlack:link,a.fontBlack:visited{color:#333333}
+a:active,a:hover,a.fontGray:active,a.fontGray:hover,a.fontBlack:active,a.fontBlack:hover{color:#FF4E00;text-decoration:underline}
+a.linkLine:link,a.linkLine:visited,a.linkLine:active,a.linkLine:hover{text-decoration:underline}
+a.linkFloat:hover{position:relative;left:1px;top:1px}
+.inputMain {
+	border:1px solid #718DA6;
+	height:17px;
+	padding:2px 0 0 4px;
+}
+/* 头文件v3.0 */
+#headNote{background:#FFFFF7;border-bottom:1px solid #EDDCC8;padding:5px 0}
+#headV3{font-family:Verdana;height:125px;background:url(img/headBg.gif);overflow:hidden;margin-bottom:10px}
+#headV3 a:link,#headV3 a:visited,#footV3 a:link,#footV3 a:visited{color:#333333;text-decoration:none}
+#headV3 a:active,#headV3 a:hover,#footV3 a:active,#footV3 a:hover{color:#FF4E00;text-decoration:underline}
+#headV3 a.linkBlue:link,#headV3 a.linkBlue:visited,#footV3 a.linkBlue:link,#footV3 a.linkBlue:visited{color:#014ccc;text-decoration:none}
+#headV3 a.linkBlue:active,#headV3 a.linkBlue:hover,#footV3 a.linkBlue:active,#footV3 a.linkBlue:hover{color:#014ccc;text-decoration:underline}
+#headV3 #headLogo{left:0;top:0;z-index:2}
+#headV3 #headLogoBg{left:0;top:0;z-index:2}
+#headV3 #headNavi{right:0;top:0;height:66px;width:660px;overflow:hidden;z-index:1;background:url(img/logoNewYear2008B.gif) top left no-repeat;text-align:right;}
+#headV3 #headItem{margin-top:6px;height:26px;overflow:hidden}
+#headV3 #headBtn{padding:0 0 0 13px}
+#headV3 #headMenu{right:0;bottom:0;z-index:3;width:520px;height:29px;background:url(img/menuBg.gif) bottom repeat-x}
+#headV3 #menuList{width:520px;overflow:hidden;height:29px;background:url(img/menuSide.gif) right bottom no-repeat}
+#headV3 #menuList li{float:left;height:29px;background:url(img/menuSplit.gif) left bottom no-repeat}
+#headV3 #menuList li span{display:block;padding:8px 16px 0 16px}
+#headV3 #menuList li a:hover{color:#ff5500;text-decoration:none;background:url(img/menuBgOver.gif) bottom repeat-x;display:block;float:left;height:29px}
+#headV3 #menuList #menuHome{height:29px;padding-left:10px;background:url(img/menuLeft.gif) left bottom no-repeat}
+#headV3 #menuList .menuHere{background:url(img/menuHere.gif) left bottom no-repeat;font-size:14px;font-weight:bold}
+#headV3 #menuList .menuHere a{color:#fff;display:block;float:left;height:29px;background:url(img/menuHereSide.gif) right bottom no-repeat}
+#headV3 #menuList .menuHere a:hover{background:url(img/menuHere.gif) left bottom no-repeat;color:#fff}
+#headV3 #headFind{left:0;top:65px;height:60px;width:950px;overflow:hidden;z-index:0;background:url(img/headFindBg.gif) repeat-x}
+#headV3 #headPush{top:66px;left:-13px;height:60px;width:220px;overflow:hidden;background:url(img/headFindLeft.gif) left top no-repeat}
+#headV3 #headForm{z-index:4;top:66px;right:103px;height:60px;width:640px;overflow:hidden;}
+#headV3 #headForm .findInto{width:240px;border:1px solid #4194cf;color:#808080;height:16px;padding:4px 0 0 4px;font-family:"宋体"}
+#headV3 #headForm .findGoto{background:url(img/headFind.gif);height:22px;width:47px;border:none;cursor:hand}
+#headV3 #headForm .divSelect{top:11px;border:1px solid #4194cf;height:20px;background-color:#fff}
+#headV3 #headForm .divSelectHide{top:0;left:0;height:16px;margin-top:2px;margin-left:2px}
+#headV3 #headForm .divSelectHide select{margin:-2px}
+#headV3 #headHelp{top:0;right:0;height:44px;padding-top:10px;padding-right:20px;height:60px;line-height:150%;overflow:hidden;background:url(img/headFindSide.gif) top right no-repeat} 
+#headV3 #headForm #headLink{top:39px;left:0;width:620px;padding-left:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#headV3 #headForm #headLink a{color:#fff}
+/* 尾文件v3.0 */
+#footV3{border-top:1px solid #e0dfe4;font-family:Verdana;margin-top:20px}
+#footV3 #footLink{margin:18px auto 11px;width:560px;}
+#footV3 #footLink li{float:left;margin-right:20px}
+#footV3 div{margin-bottom:3px;text-align:center;}
+#footV3 #wangjing{padding-left:280px;height:50px;width:70px;float:left;}
+#footV3 #shengming{width:350px; height:50px;  float:left; line-height:200%;}
+/* 头文件v3.0 A for member */
+#headV3A{height:100px;overflow:hidden;margin:0 auto 10px;width:950px}
+#headV3A #headV3,#headV3A #headNavi{background:none;}
+#headV3A{background:url(img/headV3ABg.gif)}
+#headV3A #headV3 #headItem{padding-top:20px;padding-right:20px}
+/* 头文件v3.0 B for auction */
+#headV3B{height:60px;overflow:hidden;margin-bottom:10px}
+#headV3B #headV3,#headV3B #headNavi{background:none;}
+#headV3B #headV3 #headMenu{right:180px;top:34px;z-index:4;width:420px;height:19px;background:#f2f2f2;overflow:hidden}
+#headV3B #headV3 #menuList{width:420px;overflow:hidden;height:19px;background:url(img/menuV3BSide.gif) right bottom no-repeat}
+#headV3B #headV3 #menuList li{float:left;height:19px;background:url(img/menuV3BSplit.gif) left bottom no-repeat}
+#headV3B #headV3 #menuList li span{display:block;padding:0 10px;margin-top:4px}
+#headV3B #headV3 #menuList li a:hover{color:#ff5500;text-decoration:none;background:none;height:19px}
+#headV3B #headV3 #menuList #menuHome{height:19px;padding-left:10px;background:url(img/menuV3BLeft.gif) left bottom no-repeat}
+#headV3B #headV3BFind{top:32px;right:0;z-index:3}
+#headV3B .findInto{width:120px;border:1px solid #bbbbbb;color:#808080;height:15px;padding:3px 0 0 4px;font-family:"宋体"}
+#headV3B .findGoto{background:url(img/headV3BFind.gif);height:20px;width:39px;border:none;cursor:hand}
+/* 头文件v3.0 C for pay */
+#headV3C{height:60px;overflow:hidden;margin-bottom:10px}
+#headV3C #headV3,#headV3C #headNavi{background:none;}
+#headV3C #headV3 #headItem{text-align:right}
+/* 头文件v3.0 D for bbs */
+#headV3D{height:80px;overflow:hidden;width:760px;margin:0 auto 10px}
+#headV3D #headV3,#headV3D #headNavi{background:none;}
+#headV3D #headV3 #headNavi{width:470px;height:80px}
+#headV3D #headV3 #headBtn{padding:0 1px 0 3px}
+#headV3D #headV3 #headMenu{right:0;top:60px;z-index:4;width:420px;height:19px;background:#f2f2f2;overflow:hidden}
+#headV3D #headV3 #menuList{width:420px;overflow:hidden;height:19px;background:url(img/menuV3BSide.gif) right bottom no-repeat}
+#headV3D #headV3 #menuList li{float:left;height:19px;background:url(img/menuV3BSplit.gif) left bottom no-repeat}
+#headV3D #headV3 #menuList li span{display:block;padding:0 10px;margin-top:4px}
+#headV3D #headV3 #menuList li a:hover{color:#ff5500;text-decoration:none;background:none;height:19px}
+#headV3D #headV3 #menuList #menuHome{height:19px;padding-left:10px;background:url(img/menuV3BLeft.gif) left bottom no-repeat}
+#headV3D #headV3DFind{top:32px;right:0;z-index:3}
+#headV3D .findInto{width:120px;border:1px solid #bbbbbb;color:#808080;height:15px;padding:3px 0 0 4px;font-family:"宋体"}
+#headV3D .findGoto{background:url(img/headV3BFind.gif);height:20px;width:39px;border:none;cursor:hand}
+/* 搜索提示 */
+#result{width:244px;overflow:hidden;border:1px solid #808080;color:gray;position:absolute;left:250px;top:-38px;background:#fff}
+#result a{border-bottom:1px dotted #BADDFD;display:block;text-decoration:none;height:20px;position:relative;cursor:hand;color:#333}
+#result a:hover,#result a.activeLink{text-decoration:none;background:#E5F5FF;color:#FF4E00}
+#result .resultName{position:absolute;left:10px;width:120px;top:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left}
+#result .resultCount{position:absolute;right:10px;width:100px;top:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:right}
+#headV3 optgroup.optionShow{background:#E4F5FB}
+/* 头文件v3.0 for my */
+#headV3My a:link, #headV3My a:visited {
+	color:#1835D1;
+	text-decoration:underline
+}
+#headV3My a:active, #headV3My a:hover {
+	color:#FF4E00;
+	text-decoration:underline
+}
+#headV3My {
+	height:60px;
+	overflow:hidden;
+}
+#headV3My #headV3, #headV3My #headNavi {
+	background:none;
+}
+#headV3My #headV3 #headLogo {
+	left:10px
+}
+#headMyUser {
+	left:320px;
+	top:10px
+}
+#headMyItem {
+	right:10px;
+	top:10px
+}
+#headMyFind {
+	right:10px;
+	top:30px
+}
+#headMyFind .findInto {
+	width:120px;
+	border:1px solid #bbbbbb;
+	color:#808080;
+	height:15px;
+	padding:3px 0 0 4px;
+	font-family:"宋体"
+}

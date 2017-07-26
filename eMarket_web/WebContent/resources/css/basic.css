@@ -1,0 +1,77 @@
+#loginwin div.fbox				{height:28px;margin-top:21px;background:#EBFBD7;border:1px solid #FFFFFF;}
+#mask							{
+	position:absolute;
+	z-index:2;
+	top:0px;
+	left:0px;
+	width:1001px;
+	height:715px;
+	filter:alpha(opacity=45);
+-moz-opacity:0.50;	opacity:0.50;
+	background-color: #E0F1FD;
+}
+#loginwin						{position:absolute;z-index:3;top:0px;left:0px;}
+#loginwin div.mbox				{
+	position:absolute;
+	z-index:3;
+	top:140px;
+	width:304px;
+	height:224px;
+	border:1px solid #D1EEFC;
+	text-align:left;
+	background:#F9FFEE;
+	left: 374px;
+	background-color: #E4F3FF;
+}
+#loginwin div.mbox h3			{text-align:left;height:28px;line-height:29px;font-size:12px;border:1px solid #FFFFFF;padding-left:20px;background:url("/img/dots.gif") no-repeat -8px -36px #B5E0F4;color:#105CB6;}±êÌâ
+#loginwin div.mbox h3 div.title	{float:left;margin-top:6px;font-weight:bold;font-size:12px;}
+#loginwin div.mbox h3 a.tips	{float:left;display:block;width:20px;height:20px;background:url("/img/icons.gif") no-repeat -92px -90px;}
+#loginwin div.mbox h3 div.Q_closelogin {cursor:pointer;float:right;width:20px;height:20px;background:url("/img/icons.gif") no-repeat 2px 6px;}
+#loginwin .shadow				{position:absolute;z-index:2;top:86px;left:347px;width:294px;height:341px;background:#B8B8B8;filter:alpha(opacity=50);-moz-opacity:0.50;opacity:0.50;}
+#loginwin div.cbox				{
+	height:100px;
+	margin-left:20px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#loginwin div.fbox				{height:28px;margin-top:21px;background:#D1EEFC;border:1px solid #FFFFFF;}×¢²á
+* html #loginwin div.fbox		{margin-top:0px;}
+#loginwin div.fbox a			{line-height:28px;}
+#loginwin div.fbox div			{margin-left:78px;}
+#loginwin .itn, #loginwin .itf, #loginwin .ite	{width:185px;}
+#loginwin .icn, #loginwin .icf, #loginwin .ics	{float:left;margin-top:2px;}
+#loginwin .isn					{float:right;}
+.mbox1 h3.title					{color:#6D6D6D;background:#DBEEFF;}
+.but {
+	color: #1C4185;
+	background-color: #EAEFF5;
+	height: 23px;
+	width: 75px;
+	border: 1px solid #ACB9D1;
+	font-size: 12px;
+	cursor:pointer;
+}
+.txt {
+	border: 1px solid #145CA6;
+	height: 16px;
+}
+
+a:link {
+	text-decoration: none;
+	COLOR: #105cb6;
+	font-size: 13px;
+}
+a:visited {
+	text-decoration: none;
+	COLOR: #105cb6;
+	font-size: 13px;
+}
+a:hover {
+	text-decoration: none;
+    COLOR: #CC6633;
+	font-size: 13px;
+}
+a:active {
+	text-decoration: none;
+}

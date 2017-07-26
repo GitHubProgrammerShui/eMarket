@@ -1,0 +1,582 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+PRE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LABEL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TABLE {
+	BORDER-COLLAPSE: collapse; border-spacing: 0
+}
+FIELDSET {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+ADDRESS {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+CAPTION {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+CITE {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+CODE {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+DFN {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+EM {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+TH {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+VAR {
+	FONT-WEIGHT: normal; FONT-STYLE: normal
+}
+OL {
+	LIST-STYLE-TYPE: none
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+CAPTION {
+	TEXT-ALIGN: left
+}
+TH {
+	TEXT-ALIGN: left
+}
+H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%
+}
+Q:unknown {
+	content: ''
+}
+Q:unknown {
+	content: ''
+}
+abbr {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+ACRONYM {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+BODY {
+	FONT: small arial,simsung,sans-serif; TEXT-ALIGN: center
+}
+TABLE {
+	
+}
+A:link {
+	COLOR: #0243db
+}
+A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A:active {
+	TEXT-DECORATION: underline
+}
+#yhd {
+	MARGIN: 0px auto 0.84em; WIDTH: 57.85em; TEXT-ALIGN: left
+}
+#ybd {
+	MARGIN: 0px auto 0.84em; WIDTH: 57.85em; TEXT-ALIGN: left
+}
+#yft {
+	MARGIN: 0px auto 0.84em; WIDTH: 57.85em; TEXT-ALIGN: left
+}
+#yft {
+	TEXT-ALIGN: center
+}
+#ybd {
+	BORDER-RIGHT: #b2b2b2 1px solid; BORDER-TOP: #b2b2b2 1px solid; BORDER-LEFT: #b2b2b2 1px solid; BORDER-BOTTOM: #b2b2b2 1px solid
+}
+#ymemsubhead:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.ymemforminput:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#regSubmit:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#regTos:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#yhd:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#ybd:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#yft:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+#ymemsubhead .bdl {
+	FLOAT: left
+}
+#ymemsubhead .bdr {
+	FLOAT: right
+}
+#ybd FIELDSET {
+	CLEAR: both; BACKGROUND: url(dt.gif) repeat-x 50% bottom; PADDING-BOTTOM: 0.84em; MARGIN: 1.2em 0.6em; BORDER-BOTTOM: #999 0px dotted; ZOOM: 1
+}
+#ysys_warnning {
+	CLEAR: both; BACKGROUND: url(dt.gif) repeat-x 50% bottom; PADDING-BOTTOM: 0.84em; MARGIN: 1.2em 0.6em; BORDER-BOTTOM: #999 0px dotted; ZOOM: 1
+}
+#ymemsubhead {
+	CLEAR: both; BACKGROUND: url(dt.gif) repeat-x 50% bottom; PADDING-BOTTOM: 0.84em; MARGIN: 1.2em 0.6em; BORDER-BOTTOM: #999 0px dotted; ZOOM: 1
+}
+#ybd {
+	MARGIN-BOTTOM: 2em; COLOR: #505050
+}
+#yhd {
+	PADDING-TOP: 0.8em
+}
+#yhd H1 {
+	FLOAT: left
+}
+#yhd .ytsc {
+	FLOAT: right
+}
+#ybd #ymemsubhead {
+	COLOR: #000; PADDING-TOP: 0.5em
+}
+#ymemsubhead .bdl {
+	PADDING-LEFT: 80px; BACKGROUND: url(is.gif) no-repeat -1em -1630px; HEIGHT: 64px
+}
+#ymemsubhead .bdl H2 {
+	FONT-WEIGHT: 800; FONT-SIZE: 1.34em; MARGIN-BOTTOM: 0.2em
+}
+#ybd FIELDSET {
+	PADDING-LEFT: 3em
+}
+#ybd LEGEND {
+	CLEAR: both; DISPLAY: block; FONT-WEIGHT: bold; MARGIN-BOTTOM: 0.84em; MARGIN-LEFT: -0.5em; COLOR: #62126b
+}
+#ybd LEGEND EM {
+	FONT-WEIGHT: 200; COLOR: #505050
+}
+.ymemforminput {
+	CLEAR: both; MARGIN-BOTTOM: 0.5em; WIDTH: 100%; POSITION: relative
+}
+.ymemformlabel {
+	FLOAT: left; LINE-HEIGHT: 1.6em; MARGIN-RIGHT: 0.5em
+}
+.ymemformfield {
+	FLOAT: left; LINE-HEIGHT: 1.6em; MARGIN-RIGHT: 0.5em
+}
+.ymemformlabel {
+	WIDTH: 11em; TEXT-ALIGN: right
+}
+.ymemformlabel LABEL {
+	FLOAT: right
+}
+#yahooIdFld B {
+	FONT-SIZE: 1.14em; FLOAT: left; COLOR: #fe0000; MARGIN-RIGHT: 0.5em
+}
+#yahooIdFld .inp {
+	MARGIN-RIGHT: 0.5em
+}
+#yahooIdFld #yahooIdFldIcon {
+	DISPLAY: none
+}
+#dobFld .ymemformfield LABEL {
+	MARGIN-TOP: 0.2em; FLOAT: left; MARGIN-RIGHT: 0.5em
+}
+#dobFld .inp {
+	MARGIN-RIGHT: 1em
+}
+#captchaShuffle {
+	FLOAT: left; MARGIN-RIGHT: 0.4em
+}
+.inp {
+	FLOAT: left; MARGIN-RIGHT: 0.4em
+}
+#captchaShuffle IMG {
+	DISPLAY: block
+}
+#captchaShuffleLink {
+	MARGIN-LEFT: 5em
+}
+#regTosFld {
+	DISPLAY: none; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left
+}
+#regTosFld .ymemformlabel {
+	WIDTH: 2em
+}
+#regTos TEXTAREA {
+	MARGIN-LEFT: 8%; WIDTH: 78%
+}
+#regTos P {
+	MARGIN-LEFT: 8%; WIDTH: 78%
+}
+#regTos TEXTAREA {
+	MARGIN-TOP: 0.2em; FONT-SIZE: 1em; COLOR: #505050; LINE-HEIGHT: 1.5em; HEIGHT: 5em
+}
+#regTos {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.5em; LINE-HEIGHT: 1.6em; PADDING-TOP: 0.5em; ZOOM: 1
+}
+#regSubcMl {
+	MARGIN-TOP: -0.42em; PADDING-BOTTOM: 0.42em
+}
+#regSubcMl .bd {
+	PADDING-LEFT: 4.5em
+}
+#regSubcMl .bd LI {
+	FLOAT: left; WIDTH: 5em; WHITE-SPACE: nowrap; HEIGHT: 2em
+}
+#regSubmit {
+	POSITION: relative; HEIGHT: 5em
+}
+#regSubmit .regBtn {
+	BORDER-RIGHT: #ffa516 1px solid; BORDER-TOP: #ffa516 1px solid; BACKGROUND: url(is.gif) repeat-x -38px -1254px; BORDER-LEFT: #ffa516 1px solid; WIDTH: 12em; BORDER-BOTTOM: #ffa516 1px solid; POSITION: absolute; TOP: 0px; TEXT-ALIGN: center
+}
+#regSubmit .cancelBtn {
+	BORDER-RIGHT: #ffa516 1px solid; BORDER-TOP: #ffa516 1px solid; BACKGROUND: url(is.gif) repeat-x -38px -1254px; BORDER-LEFT: #ffa516 1px solid; WIDTH: 12em; BORDER-BOTTOM: #ffa516 1px solid; POSITION: absolute; TOP: 0px; TEXT-ALIGN: center
+}
+#regSubmit .regBtn {
+	RIGHT: 12em
+}
+#regSubmit .cancelBtn {
+	RIGHT: 2em; WIDTH: 8.4em
+}
+#regSubmit .regBtn BUTTON {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: 800; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 1.17em; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 100%; CURSOR: hand; HEIGHT: 1.5em; BORDER-RIGHT-WIDTH: 0px
+}
+#regSubmit .cancelBtn BUTTON {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: 800; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 1.17em; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 100%; CURSOR: hand; HEIGHT: 1.5em; BORDER-RIGHT-WIDTH: 0px
+}
+.tr {
+	RIGHT: -2px; BACKGROUND: url(is.gif) no-repeat; OVERFLOW: hidden; WIDTH: 7px; POSITION: absolute; HEIGHT: 7px
+}
+.br {
+	RIGHT: -2px; BACKGROUND: url(is.gif) no-repeat; OVERFLOW: hidden; WIDTH: 7px; POSITION: absolute; HEIGHT: 7px
+}
+.tl {
+	DISPLAY: block; BACKGROUND: url(is.gif) no-repeat; LEFT: -1px; POSITION: relative; HEIGHT: 8px
+}
+.bl {
+	DISPLAY: block; BACKGROUND: url(is.gif) no-repeat; LEFT: -1px; POSITION: relative; HEIGHT: 8px
+}
+.tr {
+	BACKGROUND-POSITION: -38px -858px; TOP: 0px
+}
+.br {
+	BACKGROUND-POSITION: -38px -366px; BOTTOM: 0px
+}
+.tl {
+	BACKGROUND-POSITION: -38px -612px; TOP: -1px
+}
+.bl {
+	BACKGROUND-POSITION: -38px -119px; BOTTOM: -1px
+}
+#regSubmit .cancelBtn {
+	BACKGROUND-POSITION: -38px -1104px; BORDER-LEFT-COLOR: #999; BORDER-BOTTOM-COLOR: #999; BORDER-TOP-COLOR: #999; BORDER-RIGHT-COLOR: #999
+}
+#regSubmit .cancelBtn .tl {
+	BACKGROUND-POSITION: -38px -530px
+}
+#regSubmit .cancelBtn .tr {
+	BACKGROUND-POSITION: -38px -776px
+}
+#regSubmit .cancelBtn .bl {
+	BACKGROUND-POSITION: -38px -37px
+}
+#regSubmit .cancelBtn .br {
+	BACKGROUND-POSITION: -38px -284px
+}
+#regSubmit .btnhover {
+	BACKGROUND-POSITION: -38px -1404px; BORDER-LEFT-COLOR: #a7cc26; BORDER-BOTTOM-COLOR: #a7cc26; BORDER-TOP-COLOR: #a7cc26; BORDER-RIGHT-COLOR: #a7cc26
+}
+#regSubmit .btnhover .tl {
+	BACKGROUND-POSITION: -38px -448px
+}
+#regSubmit .btnhover .tr {
+	BACKGROUND-POSITION: -38px -694px
+}
+#regSubmit .btnhover .bl {
+	BACKGROUND-POSITION: -38px -939px
+}
+#regSubmit .btnhover .br {
+	BACKGROUND-POSITION: -38px -202px
+}
+#yahooid {
+	WIDTH: 10em
+}
+#password {
+	WIDTH: 12em
+}
+#passwordconfirm {
+	WIDTH: 12em
+}
+#fullname {
+	WIDTH: 12em
+}
+#secquestionanswer {
+	WIDTH: 19em
+}
+#altemail {
+	WIDTH: 16em
+}
+#cword {
+	FONT-SIZE: 18px; WIDTH: 4em
+}
+#captchaFld .statusIcon {
+	DISPLAY: none; COLOR: #999
+}
+#regTos .statusIcon {
+	DISPLAY: none; COLOR: #999
+}
+.ex {
+	DISPLAY: none; COLOR: #999
+}
+.ymemreq {
+	DISPLAY: none; COLOR: #999
+}
+#ymsgtemplate {
+	DISPLAY: none; COLOR: #999
+}
+.visible {
+	DISPLAY: block
+}
+.ymsginfo {
+	PADDING-LEFT: 12px; Z-INDEX: 1; BACKGROUND: url(helper_arrow2.gif) #ffffff no-repeat 0px 0.4em; MARGIN-LEFT: -0.2em; COLOR: #666; LINE-HEIGHT: 1.5em; TEXT-ALIGN: left
+}
+.statusIcon {
+	RIGHT: 32%; WIDTH: 16px; POSITION: absolute; TOP: 2px; HEIGHT: 16px
+}
+#secureAnswerFld .ex {
+	CLEAR: both; PADDING-RIGHT: 0.2em; DISPLAY: block; PADDING-LEFT: 0.2em; PADDING-BOTTOM: 0px; WIDTH: 20em; LINE-HEIGHT: 1.3em; PADDING-TOP: 0px; POSITION: relative
+}
+#passwordFld .ex {
+	CLEAR: none; PADDING-RIGHT: 0.2em; PADDING-LEFT: 11.5em; PADDING-BOTTOM: 0px; WIDTH: 20em; LINE-HEIGHT: 1.3em; PADDING-TOP: 0px; POSITION: relative
+}
+.submitting {
+	PADDING-LEFT: 1.5em; FONT-WEIGHT: 800; FONT-SIZE: 1.17em; BACKGROUND: url(spinner_grey.gif) no-repeat 0px 2px; FLOAT: right; MARGIN-RIGHT: 2em
+}
+.hidden {
+	DISPLAY: none
+}
+.yflderr {
+	BACKGROUND: url(spinner_grey.gif) no-repeat 0px 0px
+}
+.yflderr .ymemformlabel LABEL {
+	PADDING-LEFT: 20px; FONT-WEIGHT: 800; BACKGROUND: url(is.gif) no-repeat -38px -1798px; COLOR: #c00e0c
+}
+.ymsg {
+	FONT-SIZE: 12px; Z-INDEX: 1; RIGHT: 0px; WIDTH: 15.6em; POSITION: absolute; TOP: 0px
+}
+.ymsg .first {
+	MARGIN-TOP: 0.2em
+}
+.ymsgerr {
+	FONT-WEIGHT: 800; COLOR: #c00e0c
+}
+#ysys_warnning .bd {
+	BACKGROUND: url(ic_w.gif) no-repeat
+}
+UL#notes {
+	DISPLAY: none
+}
+#meter {
+	CLEAR: left; OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 8px
+}
+#meter DIV {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; OVERFLOW: hidden; BORDER-LEFT: #aaa 1px solid; WIDTH: 12px; LINE-HEIGHT: 0; MARGIN-RIGHT: 2px; PADDING-TOP: 0px; BORDER-BOTTOM: #aaa 1px solid; HEIGHT: 5px
+}
+#meter_bar {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: black 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: black 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: black 1px solid; HEIGHT: 5px; BACKGROUND-COLOR: red
+}
+#meter_help {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 20px; BACKGROUND: url(alrt_s.gif) no-repeat 0px 0px; PADDING-BOTTOM: 2px; MARGIN: 0px; COLOR: #ea3307; PADDING-TOP: 2px; POSITION: absolute
+}
+#meter_help P {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 0px; PADDING-TOP: 2px
+}
+#caps_txt {
+	BORDER-RIGHT: red 1px solid; BORDER-TOP: red 1px solid; DISPLAY: block; FLOAT: left; BORDER-LEFT: red 1px solid; COLOR: red; BORDER-BOTTOM: red 1px solid
+}
+#meter #meter4 {
+	MARGIN-RIGHT: 0px
+}
+#meter_tag {
+	FLOAT: left; MARGIN-LEFT: -10px; WIDTH: 64px; POSITION: relative
+}
+#meter_tag SPAN {
+	RIGHT: 1px; BOTTOM: 0px; POSITION: absolute
+}
+#meter_tag H3 {
+	CLEAR: both; DISPLAY: block; FLOAT: left
+}
+#meter_tag H3 VAR {
+	FLOAT: left
+}
+#meter_tag H3 EM {
+	FLOAT: right
+}
+#passwordFld H3 {
+	DISPLAY: none
+}
+#yidHelper {
+	CLEAR: both; BORDER-RIGHT: #f5caa0 1px solid; PADDING-RIGHT: 0.7em; BORDER-TOP: #f5caa0 1px solid; PADDING-LEFT: 0.7em; BACKGROUND: url(https://member.cn.yahoo.com/images/cnregcn/0828/idhelpr_bg.gif) repeat-x 0px -6px; LEFT: 11.5em; FLOAT: left; PADDING-BOTTOM: 0.7em; BORDER-LEFT: #f5caa0 1px solid; WIDTH: 23.6em; COLOR: #e05921; PADDING-TOP: 0.7em; BORDER-BOTTOM: #f5caa0 1px solid; POSITION: relative
+}
+#yidHelper {
+	MARGIN-TOP: 0.2em
+}
+#yidHelperGuruIcon {
+	LEFT: 8em; POSITION: absolute; TOP: 2em
+}
+#yidHelper:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: '.'
+}
+#yidHelperBtn {
+	FLOAT: left; MARGIN-LEFT: 0.5em
+}
+#yidHelper .hd {
+	MARGIN: 0.2em 0px
+}
+#yidHelper .bd {
+	MARGIN: 0.2em 0px
+}
+#yidHelper .ft {
+	MARGIN: 0.2em 0px
+}
+#yidHelper .activeNavLink {
+	CURSOR: pointer; COLOR: #024cc9; TEXT-DECORATION: underline
+}
+#yidHelperNav {
+	CLEAR: left; FONT-WEIGHT: normal; FLOAT: right; COLOR: #e05921
+}
+#yidHelperNav .yidHelperNavSep {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.3em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#yidHelperNav A {
+	CURSOR: default; COLOR: #e05921; TEXT-DECORATION: none
+}
+#yidHelper .hd {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; COLOR: #e05921; TEXT-ALIGN: left
+}
+#yidHelper .bd {
+	MARGIN-TOP: 0.4em; POSITION: relative
+}
+#yidHelper .bd DIV#yidHelperBusyIcon {
+	WIDTH: 99%
+}
+#yidHelper .bd DIV#yidHelperBusyIcon IMG {
+	PADDING-RIGHT: 1em; FLOAT: left
+}
+#yidHelper .bd DIV.col {
+	WIDTH: 50%
+}
+#yidHelper .bd DIV.right {
+	LEFT: 50%; POSITION: absolute; TOP: 0px
+}
+#yidHelper .bd DIV.padLeft {
+	MARGIN-LEFT: 0.5em
+}
+#yidHelper .bd DIV.yidHelperSuggId {
+	WIDTH: 100%; COLOR: #e05921
+}
+#yidHelper .bd DIV.yidHelperSuggId A {
+	MARGIN-LEFT: 0.3em; COLOR: #024cc9
+}
+#yidHelper .ft {
+	MARGIN-BOTTOM: 0px
+}
+#yidHelper .ft #yidHelperShowSuggs {
+	DISPLAY: block
+}
+#errs {
+	PADDING-LEFT: 60px; MIN-HEIGHT: 40px; BACKGROUND: url(err2.gif) no-repeat 0px 5px; PADDING-BOTTOM: 1em; MARGIN: 1em auto auto; WIDTH: 50%; COLOR: #ff0000
+}
+#errs LI {
+	LINE-HEIGHT: 1.8em
+}

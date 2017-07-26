@@ -1,0 +1,146 @@
+body{
+	font-size: 12px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	text-decoration: none;
+	color: #6EA315;
+}
+a:visited {
+	text-decoration: none;
+	color: #6EA315;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: none;
+	color: #FF0000;
+}
+.tabStyleA_title {
+	color: #316AC5;
+	background-color: #DBEEFF;
+}
+.tabStyleA_border {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #73A8CE;
+	border-right-color: #73A8CE;
+	border-bottom-color: #73A8CE;
+	border-left-color: #73A8CE;
+}
+.tabStyleA_Font {
+	color: #45779C;
+	font-size: 13px;
+	border-bottom-style: none;
+	font-weight: bold;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+}
+.tabStyleA_ListBorder1 {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-bottom-color: #D0DFE4;
+	border-bottom-width: 1px;
+	color: #45779C;
+	background-color: #F5FBFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tabStyleA_ListBorder2 {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-bottom-color: #D0DFE4;
+	border-bottom-width: 1px;
+	color: #45779C;
+	background-color: #B0DFFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.tabStyleA_ListBorder3 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: dashed;
+	border-top-color: #D0DFE4;
+	border-right-color: #D0DFE4;
+	border-bottom-color: #D0DFE4;
+	border-left-color: #D0DFE4;
+	color: #45779C;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 26px;
+}
+.tabStyleA_ListBorder6 {
+	color: #45779C;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 26px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+.tabStyleA_ListBorderMed {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C6D7E9;
+	color: #45779C;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.tabStyleA_Frame {
+	border: 1px solid #B0C8E4;
+}
+.butStyleA {
+	height: 22px;
+	border: 1px solid #B0C8E4;
+	background-color: #F1FAFF;
+	color: #145CA6;
+	font-size: 12px;
+}
+.butStyleB1 {
+	background-image: url(../img/but1StyleA.GIF);
+	height: 27px;
+	width: 110px;
+	color: #105CB6;
+}
+
+.textStyleB {
+	height: 20px;
+	border: 1px solid #B0C8E4;
+	font-size: 15px;
+	color: #145CA6;
+}
+.textStyleA {
+	height: 16px;
+	border: 1px solid #B0C8E4;
+	font-size: 15px;
+	color: #145CA6;
+}
+.frameBorder {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #C9D1F7;
+	border-right-color: #C9D1F7;
+	border-bottom-color: #C9D1F7;
+	border-left-color: #C9D1F7;
+}
+.relative {
+	POSITION: relative
+}

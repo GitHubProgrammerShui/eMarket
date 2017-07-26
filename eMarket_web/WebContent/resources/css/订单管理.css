@@ -1,0 +1,24 @@
+#main{
+	height: 800px;
+}
+#top .left{
+	width: 195px;
+	height: 40px;
+	margin: 0px;
+	/*background-image: url("images/头部-角色管理.jpg");*/
+	display: inline;
+}
+#top .right{
+	width: 1000px;
+	height: 40px;
+	margin: 0px;
+	/*background-image: url("images/头部-角色右端.jpg");*/
+	display: inline;
+}
+#menuArea .menu{
+	background-color: red;
+	width: 600px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
