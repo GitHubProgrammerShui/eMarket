@@ -19,12 +19,8 @@ public class PropsUtil {
 	
 	static{
 		if(reader==null){
-			try {
-				reader=new PropertiesReader();
-				reader.load("classpath:application.xml");
-			} catch (JDOMException | IOException e) {
-				e.printStackTrace();
-			}
+			reader=new PropertiesReader();
+			reader.load("classpath:application.xml");
 		}
 	}
 	
